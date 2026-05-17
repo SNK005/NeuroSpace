@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroSpace | AI Study Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="background-animation"></div>
+
+
+    <div class="dashboard-container">
+
+        <!-- Header Section -->
+        <header class="glass-panel">
+            <h1><i class="fa-solid fa-brain"></i> NeuroSpace</h1>
+            <p>AI-Powered Focus Environment</p>
+        </header>
+
+
+        <main class="grid-layout">
+
+            <!-- Pomodoro Timer Section -->
+            <section class="glass-panel timer-section">
+                <h2><i class="fa-solid fa-stopwatch"></i> Focus Timer</h2>
+                <div class="timer-display" id="time-display">25:00</div>
+                <div class="timer-controls">
+                    <button id="start-btn" class="btn primary-btn"><i class="fa-solid fa-play"></i> Start</button>
+                    <button id="pause-btn" class="btn secondary-btn"><i class="fa-solid fa-pause"></i> Pause</button>
+                    <button id="reset-btn" class="btn danger-btn"><i class="fa-solid fa-rotate-right"></i>
+                        Reset</button>
+                </div>
+            </section>
+
+            <!-- Study Modes Section -->
+            <section class="glass-panel modes-section">
+                <h2><i class="fa-solid fa-layer-group"></i> Study Modes</h2>
+                <div class="mode-buttons">
+                    <button class="btn mode-btn active" data-time="25"><i class="fa-solid fa-bolt"></i> Pomodoro
+                        (25m)</button>
+                    <button class="btn mode-btn" data-time="50"><i class="fa-solid fa-book-open"></i> Deep Work
+                        (50m)</button>
+                    <button class="btn mode-btn" data-time="5"><i class="fa-solid fa-mug-hot"></i> Short Break
+                        (5m)</button>
+                    <button class="btn mode-btn" data-time="15"><i class="fa-solid fa-couch"></i> Long Break
+                        (15m)</button>
+                </div>
+            </section>
+
+            <!-- Ambient Sounds Section -->
+            <section class="glass-panel ambient-section">
+                <h2><i class="fa-solid fa-headphones"></i> Ambient Audio</h2>
+                <div class="sound-grid">
+                    <!-- In a real app, these would play actual audio files -->
+                    <button class="btn sound-btn" data-sound="rain"><i class="fa-solid fa-cloud-rain"></i> Rain</button>
+                    <button class="btn sound-btn" data-sound="cafe"><i class="fa-solid fa-mug-saucer"></i> Cafe</button>
+                    <button class="btn sound-btn" data-sound="waves"><i class="fa-solid fa-water"></i> Waves</button>
+                    <button class="btn sound-btn" data-sound="forest"><i class="fa-solid fa-tree"></i> Forest</button>
+                </div>
+                <div class="volume-control">
+                    <i class="fa-solid fa-volume-low"></i>
+                    <input type="range" id="volume-slider" min="0" max="100" value="50">
+                    <i class="fa-solid fa-volume-high"></i>
+                </div>
+            </section>
+
+            <!-- AI Motivational Quotes Section -->
+            <section class="glass-panel quote-section">
+                <h2><i class="fa-solid fa-robot"></i> AI Motivator</h2>
+                <div class="quote-container">
+                    <p id="quote-text">"Success is not final, failure is not fatal: it is the courage to continue that
+                        counts."</p>
+                    <span id="quote-author">- Winston Churchill</span>
+                </div>
+                <button id="new-quote-btn" class="btn outline-btn"><i class="fa-solid fa-wand-magic-sparkles"></i>
+                    Generate Insight</button>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Link to our external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
